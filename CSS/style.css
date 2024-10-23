@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+}
+body {
+    background-color: #3c5077;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.btns {
+    width: 100%;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.btns button {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.btns button#success {
+    background-color: var(--success-color);
+}
+.btns button#error {
+    background-color: var(--error-color);
+}
+.btns button#warning {
+    background-color: var(--warning-color);
+}
+.btns button#info {
+    background-color: var(--info-color);
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+/* popup box */
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+.popup .icon {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+    transform: translateY(-50%);
+    background-color: white;
+    border-radius: 50%;
+}
+.popup h2 {
+    color: black;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.popup p {
+    color: #777;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.popup button {
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.popup.success button {
+    background-color: var(--success-color);
+}
+.popup.error button {
+    background-color: var(--error-color);
+}
+.popup.warning button {
+    background-color: var(--warning-color);
+}
+.popup.info button {
+    background-color: var(--info-color);
+}
+.popup.success h2,
+.popup.success .icon {
+    color: var(--success-color);
+}
+.popup.error h2,
+.popup.error .icon {
+    color: var(--error-color);
+}
+.popup.warning h2,
+.popup.warning .icon {
+    color: var(--warning-color);
+}
+.popup.info h2,
+.popup.info .icon {
+    color: var(--info-color);
+}
